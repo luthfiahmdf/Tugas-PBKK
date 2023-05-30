@@ -99,4 +99,9 @@ class StudentsController extends Controller
         return redirect('students')->with('msg','Data dengan Nama Students ' .$data->name. ' berhasil dihapus');
         
     }
+    public function wali(){
+        return view('students.wali')->with([
+            'students' => Students::all()
+        ]);
+    }
 }

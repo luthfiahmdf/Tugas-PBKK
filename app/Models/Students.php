@@ -10,7 +10,10 @@ class Students extends Model
     use HasFactory;
     protected $table='students';
     protected $primaryKey='idstudents';
-
+    
+    public function wali(){
+    return $this->hasOne('App\Models\Wali');
+}
     public $incrementing = false;
     public $timestamp = true;
 }

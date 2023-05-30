@@ -22,5 +22,5 @@ Route::get('/students/add', function () {
     return view('students.formadd');
 });
 Route::put('/students/{idstudents}', [StudentsController::class, 'update']);
-
+Route::get('/students/wali',[StudentsController::class,'wali']);
 Route::resource('students',StudentsController::class);
